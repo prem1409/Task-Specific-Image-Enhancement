@@ -124,15 +124,15 @@ def attentuation_color(image_path):
 
     hsv = cv2.cvtColor(J, cv2.COLOR_BGR2HSV)
     h,s,v=cv2.split(hsv)
-    value = 30 #whatever value you want to add
+    value = 20 #whatever value you want to add
     lim=255-value
     
     s[s>lim]=255
     s[s<lim]+=value
     value1=30
-    lim1=255-value1
-    v[v>lim1]=255
-    v[v<lim1]+=value1
+    # lim1=255-value1
+    # v[v>lim1]=255
+    # v[v<lim1]+=value1
     # hsv[:,:,2] += value1
     # hsv[:,2,:] += value
     hsv = cv2.merge((h, s, v))
@@ -144,13 +144,13 @@ def attentuation_color(image_path):
     # cl = clahe.apply(l) 
     # limg = cv2.merge((cl,a,b))
 
-    # J = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
-    J = cv2.cvtColor(J, cv2.COLOR_BGR2YUV)
-    J[:,:,0] = cv2.equalizeHist(J[:,:,0])
+    # # J = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
+    # J = cv2.cvtColor(J, cv2.COLOR_BGR2YUV)
+    # J[:,:,0] = cv2.equalizeHist(J[:,:,0])
 
-    # convert the YUV image back to RGB format
-    J = cv2.cvtColor(J, cv2.COLOR_YUV2BGR)
-    J=cv2.fastNlMeansDenoisingColored(J,None,10,10,7,21)
+    # # convert the YUV image back to RGB format
+    # J = cv2.cvtColor(J, cv2.COLOR_YUV2BGR)
+    # J=cv2.fastNlMeansDenoisingColored(J,None,10,10,7,21)
     # J=cv2.equalizeHist(J)
     # save the depthmap.
     # Note: It will be saved as gray image.
@@ -160,6 +160,5 @@ def attentuation_color(image_path):
     return J
 
 if __name__ == "__main__":
-
-    result=attentuation_color("dataset\\1_3_0.84256.png")
+    result=attentuation_color("D:\\Prem\\Sem1\\Image and video Processing\\Project\\Dataset\\HSTS\\real-world\\SGP_Bing_588.png")
     

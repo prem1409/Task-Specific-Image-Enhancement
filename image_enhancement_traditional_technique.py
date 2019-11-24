@@ -10,11 +10,16 @@ from skimage.measure import compare_ssim
 # from scipy.misc import imfilter
 from skimage import color, data, restoration
 from scipy.signal import convolve2d 
+from skimage.exposure import rescale_intensity
+import numpy as np
+import argparse
+import cv2
 
 
 class ImageEnhancement:
     def gaussian_blurring(self,input_image,kernel_size,sigma):
         output_image=cv2.GaussianBlur(input_image,kernel_size,sigma)
+        # output_image=cv2.medianBlur(input_image,kernel_size)
         return output_image
     def sampling(self,input_image,width,height):
         output_image=cv2.resize(input_image,None,fx=width,fy=height)
@@ -110,9 +115,9 @@ class ImageEnhancement:
         coarse_image =self.sampling(gaussian_blurred_image,0.25,0.25)
         dirname = 'test'
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        os.mkdir(os.path.join(dir_path, dirname))
-        os.mkdir(os.path.join(dir_path, dirname,"results"))
-        os.mkdir(os.path.join(dir_path, dirname,"inputs"))
+        # os.mkdir(os.path.join(dir_path, dirname))
+        # os.mkdir(os.path.join(dir_path, dirname,"results"))
+        # os.mkdir(os.path.join(dir_path, dirname,"inputs"))
         
         cv2.imwrite(os.path.join(dir_path, dirname,'inputs','coarse_image.png'),coarse_image)
         plt.imshow(coarse_image)
@@ -123,6 +128,7 @@ class ImageEnhancement:
         # gaus=up_sampling
         plt.imshow(gaus)
         # plt.show()
+        gaussian_blurred_image=cv2.resize(gaussian_blurred_image,(gaus.shape[1],gaus.shape[0]))
         gaus_gray=cv2.cvtColor(gaus,cv2.COLOR_BGR2GRAY)
         dst_gray=cv2.cvtColor(gaussian_blurred_image,cv2.COLOR_BGR2GRAY)
         (score, diff) = compare_ssim(gaus_gray, dst_gray, full=True)
@@ -158,6 +164,9 @@ class ImageEnhancement:
         psf = np.ones((5, 5)) / 25
         dst=cv2.fastNlMeansDenoisingColored(final,None,10,10,7,21)
         edges=cv2.cvtColor(edges,cv2.COLOR_GRAY2BGR)
+        print(edges.shape)
+        edges=cv2.resize(edges,(dst.shape[1],dst.shape[0]))
+        print(dst.shape)
         dst = cv2.addWeighted(dst,1,edges,1,0)
         hsv = cv2.cvtColor(dst, cv2.COLOR_BGR2HSV)
         h,s,v=cv2.split(hsv)
@@ -178,5 +187,5 @@ class ImageEnhancement:
         cv2.imwrite(os.path.join(output_path,'final_output.png'),dst)
 
 if __name__=="__main__":
-    img = cv2.imread("dataset/1_3_0.84256.png")
+    img = cv2.imread("D:\\Prem\\Sem1\\Image and video Processing\\Project\\Dataset\\HSTS\\real-world\\SGP_Bing_588.png")
     ImageEnhancement().image_enhancement(img)
