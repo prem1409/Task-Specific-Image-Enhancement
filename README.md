@@ -48,6 +48,12 @@ ________________________________________________________________________________
 
 ![cGANs Approach](https://drive.google.com/uc?export=view&id=1eii3EIG7yxPRby-o-YOfwI5dUoOx5jMg)
 
+In the picture above each layer of Generator comprises of a Dense Block(DB)
+
+##### Loss Function
+
+![Loss Function](https://drive.google.com/uc?export=view&id=1pSM9MjIfMfXHlb7SUd_cd0EsGxZyVOiU)
+
 ##### 2) Image Pyramid Approach
 
 ![Image Pyramid Approach](https://drive.google.com/uc?export=view&id=1_4o5m91vQascrBxAs_1HWQ9ERC--8RlL)
