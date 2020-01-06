@@ -41,6 +41,24 @@ ________________________________________________________________________________
 We are using RESIDE STANDARD Dataset comprising of 13990 indoor hazy images and 1399 clear indoor images.<br/>
 The dataset is available at: https://sites.google.com/view/reside-dehaze-datasets/reside-standard?authuser=0
 
+### Overall Architecture
+____________________________________________________________________________________________________
+
+###### 1) cGANs Approach
+
+![cGANs Approach](https://drive.google.com/open?id=1eii3EIG7yxPRby-o-YOfwI5dUoOx5jMg)
+
+###### 2) Image Pyramid Approach
+
+![Image Pyramid Approach](https://drive.google.com/open?id=1_4o5m91vQascrBxAs_1HWQ9ERC--8RlL)
+
+###### 3) CBHE Approach
+
+![CBHE Approach](https://drive.google.com/open?id=141tfKm-XbsOCGX6ZtQQT9IrTDWzKCq-7 )
+
+
+
+
 
 
  
