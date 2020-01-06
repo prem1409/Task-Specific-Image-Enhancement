@@ -44,17 +44,17 @@ The dataset is available at: https://sites.google.com/view/reside-dehaze-dataset
 ### Overall Architecture
 ____________________________________________________________________________________________________
 
-###### 1) cGANs Approach
+##### 1) cGANs Approach
 
-![cGANs Approach](https://drive.google.com/open?id=1eii3EIG7yxPRby-o-YOfwI5dUoOx5jMg)
+![cGANs Approach](https://drive.google.com/uc?export=view&id=1eii3EIG7yxPRby-o-YOfwI5dUoOx5jMg)
 
-###### 2) Image Pyramid Approach
+##### 2) Image Pyramid Approach
 
-![Image Pyramid Approach](https://drive.google.com/open?id=1_4o5m91vQascrBxAs_1HWQ9ERC--8RlL)
+![Image Pyramid Approach](https://drive.google.com/uc?export=view&id=1_4o5m91vQascrBxAs_1HWQ9ERC--8RlL)
 
-###### 3) CBHE Approach
+##### 3) CBHE Approach
 
-![CBHE Approach](https://drive.google.com/open?id=141tfKm-XbsOCGX6ZtQQT9IrTDWzKCq-7 )
+![CBHE Approach](https://drive.google.com/uc?export=view&id=141tfKm-XbsOCGX6ZtQQT9IrTDWzKCq-7)
 
 
 
