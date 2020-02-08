@@ -70,3 +70,10 @@ In the picture above each layer of Generator comprises of a Dense Block(DB)
  
 
 
+#### Authors:
+
+| Name | github handle |
+| ---- | ------ |
+| Jatin Dawar | [@jatin008](https://github.com/jatin008) |
+| Prem Raheja     | [@prem1409](https://github.com/prem1409) |
+| Utkarsh Vashisth     | [@uvashisth](https://github.com/uvashisth) |
