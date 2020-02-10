@@ -46,21 +46,21 @@ ________________________________________________________________________________
 
 ##### 1) cGANs Approach
 
-![cGANs Approach](https://drive.google.com/uc?export=view&id=1eii3EIG7yxPRby-o-YOfwI5dUoOx5jMg)
+![cGANs Approach](https://github.com/prem1409/Task-Specific-Image-Enhancement/blob/master/Assets/MM803_GANs_Architechture.png)
 
 In the picture above each layer of Generator comprises of a Dense Block(DB)
 
 ##### Loss Function
 
-![Loss Function](https://drive.google.com/uc?export=view&id=1pSM9MjIfMfXHlb7SUd_cd0EsGxZyVOiU)
+![Loss Function](https://github.com/prem1409/Task-Specific-Image-Enhancement/blob/master/Assets/cGANs_Loss_Function.png)
 
 ##### 2) Image Pyramid Approach
 
-![Image Pyramid Approach](https://drive.google.com/uc?export=view&id=1_4o5m91vQascrBxAs_1HWQ9ERC--8RlL)
+![Image Pyramid Approach](https://github.com/prem1409/Task-Specific-Image-Enhancement/blob/master/Assets/traditional_method.PNG)
 
 ##### 3) CBHE Approach
 
-![CBHE Approach](https://drive.google.com/uc?export=view&id=141tfKm-XbsOCGX6ZtQQT9IrTDWzKCq-7)
+![CBHE Approach](https://github.com/prem1409/Task-Specific-Image-Enhancement/blob/master/Assets/technique.JPG)
 
 
 
